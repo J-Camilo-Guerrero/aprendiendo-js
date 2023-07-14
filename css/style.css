@@ -1,3 +1,10 @@
+:root{
+    --blanco: #fff
+    --oscuro: #212121
+    --primario: #ffc107
+    --secundario: #0097a7
+    --gris: #757575
+}
 html {
     font-size: 62.5%;
 }
@@ -10,4 +17,15 @@ body {
 }
 .titulo span{
     font-size: 2rem;
+}
+.contenedor{
+    width: 120rem;
+    margin:0 auto;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
 }
