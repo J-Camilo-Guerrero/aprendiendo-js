@@ -1,28 +1,79 @@
-:root{
+:root{ /*paleta de colores*/
     --blanco: #fff;
     --oscuro: #212121;
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --gris-claro: #dfe9f3;
+
 }
+/* global */
 html {
     font-size: 62.5%;
+    box-sizing: border-box;/*hack para box model*/
 }
+
+*, *:before, *:after{
+    box-sizing: inherit;
+
+}
+
 body {
     font-size: 16px; /* 1rem=10px*/
     font-family: 'Roboto Slab', serif;
-
+    background-image: linear-gradient(to top, var(--gris-claro) 0%, var(--blanco) 100%);
+    /* color de fondo-linea gradient para degradado- */
 }
+
+.boton {
+    background-color: var(--secundario); /*color del fondo*/
+    color: var(--blanco); /*color de la fuente*/
+    padding: 1rem 3rem;/*margen interior*/
+    margin-top: 3rem; /*margen superior*/
+    font-size: 2rem;/*tamaño de la fuente*/
+    text-decoration: none; /*quitar linea de enlace*/
+    text-transform: uppercase; /*transformar texto (upercase:mayuscula)*/
+    font-weight: bold; /*peso(grosor)de la fuente*/
+    border-radius: .5rem; /*redondear border*/
+    width: 90%; /*ancho del elemnto*/
+    text-align: center;
+}
+
+@media (min-width:768px){
+    .boton{
+        width: auto;
+    }
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin:0 auto;
+}
+/* titulos*/
 .titulo {
     text-align: center;
     font-size: 3.8rem;
 }
+
 .titulo span{
     font-size: 2rem;
 }
-.contenedor{
-    max-width: 120rem;
-    margin:0 auto;
+
+/*tipografia*/
+
+h1 {
+font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+    text-align: center;
 }
 
 .nav-bg{
@@ -59,4 +110,32 @@ body {
     background-image: url(../img/gala.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 450px;
+    padding: 20px;
+    position: relative;
 }
+
+.contenido-hero {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0,0,0,.6);
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
